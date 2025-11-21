@@ -4,7 +4,7 @@ const ellipsis = document.querySelector(".ellipsis");
 let cardInfo;
 let viewType = "daily";
 let timeFrameTxt = {"daily": "Yesterday","weekly": "Last week", "monthly": "Last month"};
-fetch("/data.json")
+fetch("https://raw.githubusercontent.com/somaia02/time-tracking/master/data.json")
 .then((response) => {
   if (!response.ok) {
     throw new Error(`HTTP error: ${response.status}`);
