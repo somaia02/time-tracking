@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script async src="main.js"></script>
+</head>
+<body>
+  <main>
+    <div class="tracker">
+      <div class="control">
+        <div class="user">
+          <img class="user-img" src="images/image-jeremy.png" alt="Jeremy">
+          <div class="report-for">
+            <p>Report for</p>
+            <h1 class="username">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="view-type">
+          <div>
+            <input name="time-frame" type="radio" value="daily" id="daily" checked>
+            <label class="active" for="daily">Daily</label>
+          </div>
+          <div>
+            <input name="time-frame" type="radio" value="weekly" id="weekly">
+            <label for="weekly">Weekly</label>
+          </div>
+          <div>
+            <input name="time-frame" type="radio" value="monthly" id="monthly">
+            <label for="monthly">Monthly</label>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-info">
+          <div class="card-title">
+            <p class="action">Work</p>
+            <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="time">
+            <h2 class="hours">5hrs</h2>
+            <p class="prev-hours">Yesterday - 7hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/somaia02">Somaia</a>.
+  </footer>
+</body>
+</html>

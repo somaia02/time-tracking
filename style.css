@@ -1,0 +1,269 @@
+:root {
+  --purple-600: hsl(246, 80%, 60%);
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --navy-800: hsl(236, 41%, 34%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+  --box-padding-block: 30px;
+  --box-padding-inline: min(5vw, 45px);
+  --box-radius: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  color: white;
+  background-color: var(--navy-950);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  margin: 25px 5vw;
+}
+@media (min-width: 37.5em) {
+  main {
+    place-content: normal;
+  }
+}
+
+.tracker {
+  display: grid;
+  gap: 25px;
+}
+@media (min-width: 37.5em) {
+  .tracker {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--navy-900);
+  border-radius: var(--box-radius);
+}
+@media (min-width: 37.5em) {
+  .control {
+    grid-row: span 2;
+  }
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--purple-600);
+  border-radius: var(--box-radius);
+  padding: var(--box-padding-block) var(--box-padding-inline);
+}
+@media (min-width: 37.5em) {
+  .user {
+    flex: 1;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  border: white 5px solid;
+  border-radius: 50%;
+}
+
+.user p {
+  color: var(--navy-200);
+}
+
+.username {
+  margin-block: 10px 0;
+  font-weight: 300;
+  font-size: min(7vw, 2.5rem);
+}
+
+.view-type {
+  padding: var(--box-padding-block) var(--box-padding-inline);
+  color: var(--purple-500);
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 37.5em) {
+  .view-type {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+input {
+  appearance: none;
+  margin: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+}
+
+.card-wrapper {
+  padding-block-start: 2.5em;
+  border-radius: var(--box-radius);
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.work {
+  background-color: var(--orange-300);
+}
+.work::before {
+  content: url("images/icon-work.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.play {
+  background-color: var(--blue-300);
+}
+.play::before {
+  content: url("images/icon-play.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.study {
+  background-color: var(--pink-400);
+}
+.study::before {
+  content: url("images/icon-study.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.self-care {
+  background-color: var(--yellow-300);
+}
+.self-care::before {
+  content: url("images/icon-self-care.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.social {
+  background-color: var(--purple-700);
+}
+.social::before {
+  content: url("images/icon-social.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.exercise {
+  background-color: var(--green-400);
+}
+.exercise::before {
+  content: url("images/icon-exercise.svg");
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.card-info {
+  border-radius: var(--box-radius);
+  padding: var(--box-padding-block) var(--box-padding-inline);
+  background-color: var(--navy-900);
+}
+
+.card-info:hover {
+  background-color: var(--navy-800);
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 25px;
+}
+
+.ellipsis {
+  color: var(--navy-200);
+}
+
+.ellipsis:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 37.5em) {
+  .time {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.hours {
+  font-weight: 300;
+  font-size: min(8vw, 3rem);
+  margin-block: 5px;
+}
+
+.prev-hours {
+  color: var(--navy-200);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
