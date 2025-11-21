@@ -43,7 +43,8 @@ main {
   place-content: center;
   margin: 25px 5vw;
   @media (min-width: 37.5em) {
-    place-content: normal;
+    justify-content: normal;
+    align-items: center;
   }
 }
 .tracker {
@@ -119,7 +120,6 @@ label {
 .card-wrapper {
   padding-block-start: 2.5em;
   border-radius: var(--box-radius);
-  height: fit-content;
   position: relative;
   overflow: hidden;
   isolation: isolate;
